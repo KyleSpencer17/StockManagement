@@ -1,0 +1,46 @@
+<br>
+<div>
+  <table  class="table">
+    <thead>
+      <tr>
+        <th>Customer I.D:</th>
+        <th>Customer Name:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{customer1.customerId}}</td>
+        <td>{{customer1.customerName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Customer I.D:</th>
+            <th>Customer Name:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{customer1.customerId}}</td>
+            <td><input type="text" name="customerName" [(ngModel)]="customerName"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+<br>
+<div>
+</div>
+<div>
+  <button class="btn btn-primary" [disabled] = "customerName == null" (click)="updateCustomer(customer1.customerId,customerName, customer1)">Edit
+    Customer</button>
+</div>

@@ -1,0 +1,34 @@
+
+<div class="container">
+  <h1>Customers</h1>
+ <hr>
+  <table class="table table-striped table-hover table-responsive-xl">
+    <thead>
+      <tr>
+        <th>Customer I.D:</th>
+        <th>Customer Email:</th>
+        <th>Remove</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of customers">
+        <td>{{ item.customerId}}</td>
+        <td>{{item.customerName}}</td>
+        <td><button (click)="deleteCustomer(item.customerId)" class="btn btn-danger">Remove</button></td>
+        <td><button (click)="updateCustomer(item.customerId) " class="btn btn-warning">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <div>
+    <button class="btn btn-warning"><a href="../../../assets/KellogsCusty2.csv"
+      download="UserForm.csv">DownloadFile</a></button>
+  </div>
+ <div class="divider"></div>
+  <div style="color: white;" class="csv-file-chooser-section">
+    <input style="background-color: rgba(172, 44, 44, 0.459);" type="file" #fileImportInput name="File Upload"
+      id="txtFileUpload" (change)="fileChangeListener($event)" accept=".csv" />
+  </div>
+</div>
+</div>

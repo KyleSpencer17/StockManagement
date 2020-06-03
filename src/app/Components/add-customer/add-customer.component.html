@@ -1,0 +1,20 @@
+<div>
+  <table border="2" class="table">
+    <thead>
+      <tr>
+        <th>Customer I.D:</th>
+        <th>Customer Email:</th>
+        <th>Customer Password:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Auto-Generated</td>
+        <td><input type="text" name="customerName" [(ngModel)]="CustomerName"></td>
+        <td><input type="password" name="password" [(ngModel)]="password"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button class="btn btn-success" (click)='newCustomer(CustomerName, customer2,password)'>Create Profile</button>

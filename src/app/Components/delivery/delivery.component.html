@@ -1,0 +1,90 @@
+<div class = "container-xl" >
+<h1>Create Delivery</h1>
+<hr>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Select Customer</th>
+        <th>Select Order</th>
+        <th>Select Truck</th>
+        <th>Date</th>
+        <th>Driver One</th>
+        <th>Driver Two</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+          <select name="customer" [(ngModel)]="customer" id="customer" class="form-control">
+            <option value="{{item.customerId}}" value2="item.customerName" *ngFor="let item of custArray">
+              {{item.customerId}} : {{item.customerName}}</option>
+          </select></td>
+        <td>
+          <select name="order" [(ngModel)]="order" id="order" class="form-control">
+            <option *ngFor="let item of orderArray" value="{{item.orderId}}">
+              {{item.orderId}} : {{item.orderAmount}} : {{item.customerId}}
+            </option>
+          </select>
+        </td>
+        <td><select name="trucks" [(ngModel)]="trucks" id="trucks" class="form-control">
+            <option value="{{item.regNo}}" *ngFor="let item of truckArray">
+              {{item.regNo}} : {{item.truckType}} : {{item.capacity}}
+            </option>
+          </select>
+        </td>
+        <td><input type="date" name="date" [(ngModel)]="date"></td>
+        <td><select name="driver1" [(ngModel)]="driver1" id="driver1" class="form-control">
+            <option value="{{item.driverName}}" *ngFor="let item of driverArray">
+              {{item.driverId}} : {{item.driverName}}
+            </option>
+          </select>
+        </td>
+        <td><select name="driver2" [(ngModel)]="driver2" id="driver2" class="form-control">
+            <option value="{{item.driverName}}" *ngFor="let item of driverArray">
+              {{item.driverId}} : {{item.driverName}}
+            </option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-success" (click)="getOrdersForCust(customer)">Get Orders</button>
+<div class="divider"></div>
+<button class="btn btn-warning" (click)="getTruckByCapacity(order)">Get Trucks</button>
+<br>
+<br>
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Customer ID</th>
+      <th>Order ID</th>
+      <th>Truck Registration</th>
+      <th>Date</th>
+      <th>Driver One</th>
+      <th>Driver Two</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{customer}}</td>
+      <td>{{order}}</td>
+      <td>{{trucks}}</td>
+      <td>{{date}}</td>
+      <td>{{driver1}}</td>
+      <td>{{driver2}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<button class="btn btn-warning" [disabled] = "customer == null || order == null || trucks == null || date == null || driver1 == driver2 || driver1 == null || driver2 == null"  (click)="createDelivery(trucks,order,date,driver1,driver2);viewDeliveries();getOrderDestination(order)">Create Delivery</button>
+<br>
+<br>
+</div>
+<!-- <button class="btn btn-primary"   (click)=" ">View Deliveries</button> -->
+

@@ -1,0 +1,23 @@
+<h1>Add Truck</h1>
+
+<div>
+  <table border="2" class="table">
+    <thead>
+      <tr>
+        <th>Truck Registration No</th>
+        <th>Truck Type</th>
+        <th>Truck Capacity</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><input type="text" name="RegNo" [(ngModel)]="RegNo"></td>
+        <td><input type="text" name="truckType" [(ngModel)]="truckType"></td>
+        <td><input type="number" name="capacity" [(ngModel)]="capacity"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button class="btn btn-success" (click)="addTruck(RegNo,truckType,capacity)">Complete</button>

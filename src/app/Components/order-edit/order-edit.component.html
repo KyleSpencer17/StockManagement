@@ -1,0 +1,44 @@
+<h1>Edit Order</h1>
+<hr>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Order I.D:</th>
+        <th>Order Quantity:</th>
+        <th>Customer I.D</th>
+        <th>Order Destination</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{order.orderId}}</td>
+        <td>{{order.orderAmount}}</td>
+        <td>{{order.customerId}}</td>
+        <td>{{order.destination}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <table  class="table table-striped">
+    <thead>
+      <tr>
+        <th>Order I.D:</th>
+        <th>Order Quantity:</th>
+        <th>Customer I.D</th>
+        <th>Order Destination</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{order.orderId}}</td>
+        <td><input type="number" name="orderAmount" [(ngModel)]="orderAmount"></td>
+        <td>{{order.customerId}}</td>
+        <td><input type="text" name="dest" [(ngModel)]="dest"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-primary" [disabled]= "dest == null || orderAmount == null" (click)="updateOrder(order.orderId,orderAmount,order.customerId,dest)">Complete</button>

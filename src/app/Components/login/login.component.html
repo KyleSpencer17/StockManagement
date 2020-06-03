@@ -1,0 +1,33 @@
+
+<h1>Login Page</h1>
+<br>
+<div class="container">
+  <form>
+    <br>
+    <table>
+      <tr>
+        <td align="right">Customer Email:</td>
+        <td align="left"><input type="email" name="userName" [(ngModel)]="userName" /></td>
+      </tr>
+      <br>
+      <tr>
+        <td align="right">Password</td>
+        <td align="left"><input type="password" name="password" [(ngModel)]="password"></td>
+      </tr>
+      <br>
+      <tr>
+        <td align="right"> Not a Member?</td>
+        <td align="left">
+          <button (click)="addCustomer()" class="btn btn-success">Sign Up</button></td>
+      </tr>
+      <br>
+      <div>
+      </div>
+      <br>
+      <tr style="float: left;">
+        <button class="btn btn-success" (click)="Login(userName,password);">Sign In</button>
+      </tr>
+    </table>
+  </form>
+</div>
+

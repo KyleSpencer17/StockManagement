@@ -1,0 +1,31 @@
+<h1>My Orders</h1>
+<hr>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Order I.D:</th>
+        <th>Order Quantity:</th>
+        <th>Customer I.D</th>
+        <th>Order Destination</th>
+        <th>Order assigned Delivery</th>
+        <th>Cancel</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of orderArray">
+        <td>{{item.orderId}}</td>
+        <td>{{item.orderAmount}}</td>
+        <td>{{item.customerId}}</td>
+        <td>{{item.destination}}</td>
+        <td>{{item.inTruck}}</td>
+        <td>
+          <button [disabled] = "item.inTruck" (click)="deleteOrder(item.orderId)" class="btn btn-danger">
+            Cancel
+          </button></td>
+        <td><button [disabled] = "item.inTruck" (click)="editOrder(item.orderId)" class="btn btn-warning">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

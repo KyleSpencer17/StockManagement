@@ -1,0 +1,16 @@
+.container {
+  float: left;
+  display: flex;
+    width: 500px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+h1 {
+  color: rgba(68, 68, 68, 0.808);
+}
+
+hr {
+  border-width: 1px !important;
+  border-color: white !important;
+}

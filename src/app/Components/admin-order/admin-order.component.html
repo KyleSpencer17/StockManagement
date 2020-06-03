@@ -1,0 +1,36 @@
+<h1 style="color: Ghost White">Create Order</h1>
+<div class="container">
+  <form>
+    <br>
+    <table>
+      <tr>
+        <td align="right">Customer Email:</td>
+        <td align="left"><input type="email" name="name" [(ngModel)]="name" /></td>
+      </tr>
+      <br>
+      <tr>
+        <td align="right">Order Quantity:</td>
+        <td align="left"><input type="number" name="amount" [(ngModel)]="amount"></td>
+      </tr>
+      <br>
+      <tr>
+        <td align="right"> Location:</td>
+        <td align="left"><input type="text" name="location" [(ngModel)]="location"></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success" (click)="createOrder(name,amount,location)">Create Order </button>
+  </div>
+</div>
+<br>
+
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <!-- <button class="btn btn-warning" (click)="getCustId(name)">View Order</button> -->
+  </div>
+</div>

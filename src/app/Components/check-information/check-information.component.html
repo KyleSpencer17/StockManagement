@@ -1,0 +1,40 @@
+<h1>My Information</h1>
+<hr>
+    <div class="container">
+      <form>
+        <br>
+        <table>
+          <tr>
+            <th align="right">Your Email:</th>
+            <td align="left"><input type="email" name="name" [(ngModel)]="name" /></td>
+          </tr>
+          <br>
+          <tr>
+            <td align="right">Password:</td>
+            <td align="left"><input type="text" name="password" [(ngModel)]="password"></td>
+          </tr>
+          <br>
+          <tr>
+            <td align="right">Confirm Password:</td>
+            <td align="left"><input type="password" name="Conpassword" [(ngModel)]="Conpassword"></td>
+          </tr>
+        </table>
+        <br>
+      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-success" [disabled] = "password != Conpassword" (click)="updateCust(name,password)" > Save Changes </button>
+        </div>
+      </div>
+    </div>
+   
+    
+    <div class="container2" style="float: right;">
+    <p>
+      To Edit your current Information Simply Edit the Fields populated with * your Information *
+    </p>
+    </div>
+
+
+
+

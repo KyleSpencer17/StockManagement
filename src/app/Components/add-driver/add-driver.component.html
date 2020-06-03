@@ -1,0 +1,19 @@
+<h1>Edit Driver</h1>
+
+<div>
+  <table border="2" class="table">
+    <thead>
+      <tr>
+        <th>Driver I.D:</th>
+        <th>Driver Name:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Auto-Generated</td>
+        <td><input type="text" name="driverName" [(ngModel)]="driverName"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-success" (click) = "addDriver(driverName)">Add Driver</button>

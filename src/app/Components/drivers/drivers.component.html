@@ -1,0 +1,23 @@
+<h1>Drivers </h1>
+
+<div>
+  <table  class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Driver I.D:</th>
+        <th>Driver Name:</th>
+        <th>Remove</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of driversArray">
+        <td>{{ item.driverId}}</td>
+        <td>{{item.driverName}}</td>
+        <td><button class="btn btn-danger" (click) = "deleteDriver(item.driverId)">Remove</button></td>
+        <td><button class="btn btn-warning"  (click) = "editDriver(item.driverId);">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-primary" (click) = "addDriver()">Add Driver</button>

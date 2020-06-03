@@ -1,0 +1,29 @@
+<h1>Trucks</h1>
+<hr>
+<div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Truck Registration No</th>
+        <th>Truck Type</th>
+        <th>Truck Capacity</th>
+        <th>Delete Driver</th>
+        <th>Edit Driver</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let item of truckArray">
+        <td>{{item.regNo}}</td>
+        <td>{{item.truckType}}</td>
+        <td>{{item.capacity}}</td>
+        <td><button class="btn btn-danger" (click) = "deleteTruck(item.regNo)">Delete</button></td>
+        <td><button class="btn btn-warning" (click)="editTruck(item.regNo)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button class="btn btn-primary" (click) = "addTruck()">Add Truck</button>
+
+

@@ -1,0 +1,47 @@
+
+// nav {
+//   display: flex;
+  
+
+//   ul {
+//     list-style-type: none;
+//     margin: 0;
+//     display: flex;
+ 
+//     
+//       }
+//     }
+//   }
+//  }
+
+.bg-light {
+  background-color: rgba(36, 36, 36, 0.931) !important
+}
+
+ul {
+      list-style-type: none;
+       margin: 0;
+       display: flex;
+   
+       li a {
+         color:mintcream;
+         padding: 1em;
+        align-content: center;
+
+        &:hover{
+         color: rgb(0, 0, 0);
+        }
+       }
+
+     
+      }
+
+      h1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: whitesmoke !important;
+        font-size: 35px;
+      }
+
+      .dropdown-menu {
+        left: -75px;
+      }

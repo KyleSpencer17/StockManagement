@@ -1,0 +1,32 @@
+<h1>All Deliveries</h1>
+
+<table  class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tracking Number</th>
+      <th>Order ID</th>
+      <th>Truck Registration</th>
+      <th>Date</th>
+      <th>Driver One</th>
+      <th>Driver Two</th>
+      <td style="background-color: rgba(0, 0, 0, 0.602)">Destination</td>
+      <th>Dispatched</th>
+      <th>Completed?</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of deliveryArray">
+      <td>{{item.trackingNumber}}</td>
+      <td>{{item.orderId}}</td>
+      <td>{{item.regNo}}</td>
+      <td>{{item.arrivaldate}}</td>
+      <td>{{item.driver1Name}}</td>
+      <td>{{item.driver2Name}}</td>
+      <td>{{item.destination}}</td>
+      <td>{{item.complete}}</td>
+      <td><button class="btn btn-danger"(click)="deleteDelivery(item.trackingNumber,item.orderId)" >Complete Delivery</button></td>
+    </tr>
+  </tbody>
+</table>
+
